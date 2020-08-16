@@ -20,9 +20,13 @@
 					<td align="left"><input name="title" type="text"
 						value="${board.title }" /></td>
 				</tr>
+<!-- 				<tr> -->
+<!-- 					<td bgcolor="orange">파일</td> -->
+<!-- 					<td align="left"><a href="file_down.jsp?file_name=asd">asd</a></td> -->
+<!-- 				</tr> -->
 				<tr>
-					<td bgcolor="orange">파일</td>
-					<td align="left"><a href="file_down.jsp?file_name=asd">asd</a></td>
+					<td bgcolor="orange">작성자</td>
+					<td align="left">${board.writer }</td>
 				</tr>
 				<tr>
 					<td bgcolor="orange">내용</td>
