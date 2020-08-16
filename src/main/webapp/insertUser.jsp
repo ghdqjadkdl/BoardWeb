@@ -19,7 +19,7 @@
 		<h1>회원가입</h1>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<hr>
-		<form action="joinUser.do" method="post">
+		<form action="insertUser.do" method="post">
 			<table border="1" cellpadding="7" cellspacing="5">
 				<tr>
 					<td bgcolor="orange">아이디</td>
@@ -45,7 +45,6 @@
 			</table>
 		</form>
 		<hr>
-		<a href="insertUser.jsp">회원가입</a>
 	</center>
 	
 </body>

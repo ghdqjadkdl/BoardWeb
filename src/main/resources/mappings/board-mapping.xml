@@ -19,6 +19,8 @@
 		]]>
 	</insert>
 
+	
+
 	<update id="updateBoard">
 		<![CDATA[
 		UPDATE BOARD SET
