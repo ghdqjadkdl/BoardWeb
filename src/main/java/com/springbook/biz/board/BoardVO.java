@@ -15,6 +15,7 @@ public class BoardVO {
 	@XmlAttribute
 	private int seq;
 	private String title;
+	private String writer;
 	private String content;
 	private Date regDate;
 	private int cnt;
@@ -100,15 +101,24 @@ public class BoardVO {
 	}
 
 	public void setFile(String file) {
-		file = file;
+		this.file = file;
+	}
+
+	public String getWriter() {
+		return writer;
+	}
+
+	public void setWriter(String writer) {
+		this.writer = writer;
 	}
 
 	@Override
 	public String toString() {
-		return "BoardVO [seq=" + seq + ", title=" + title + ", content=" + content + ", regDate=" + regDate + ", cnt="
-				+ cnt + ", searchCondition=" + searchCondition + ", searchKeyword=" + searchKeyword + ", uploadFile="
-				+ uploadFile + ", file=" + file + "]";
+		return "BoardVO [seq=" + seq + ", title=" + title + ", writer=" + writer + ", content=" + content + ", regDate="
+				+ regDate + ", cnt=" + cnt + ", file=" + file + ", searchCondition=" + searchCondition
+				+ ", searchKeyword=" + searchKeyword + ", uploadFile=" + uploadFile + "]";
 	}
+
 	
 	
 }

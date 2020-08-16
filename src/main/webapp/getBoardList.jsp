@@ -41,8 +41,8 @@
 				<spring:message	code="message.board.list.table.head.seq" /></th>
 				<th bgcolor="orange" width="200">
 				<spring:message code="message.board.list.table.head.title" /></th>
-<!-- 				<th bgcolor="orange" width="150"> -->
-<%-- 				<spring:message code="message.board.list.table.head.writer" /></th> --%>
+				<th bgcolor="orange" width="150">
+				<spring:message code="message.board.list.table.head.writer" /></th>
 				<th bgcolor="orange" width="150">
 				<spring:message code="message.board.list.table.head.regDate" /></th>
 				<th bgcolor="orange" width="100">
@@ -53,7 +53,7 @@
 					<td>${board.seq }</td>
 					<td align="left"><a href="getBoard.do?seq=${board.seq }">
 							${board.title }</a></td>
-<%-- 					<td>${board.writer }</td> --%>
+					<td>${board.writer }</td>
 					<td><fmt:formatDate value="${board.regDate }" pattern="yyyy-MM-dd"/></td>
 					<td>${board.cnt }</td>
 				</tr>
