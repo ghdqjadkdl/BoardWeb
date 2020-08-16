@@ -34,6 +34,7 @@
 			</table>
 		</form>
 		<hr>
+		<a href="joinUser.jsp">회원가입</a>
 	</center>
 </body>
 </html>
