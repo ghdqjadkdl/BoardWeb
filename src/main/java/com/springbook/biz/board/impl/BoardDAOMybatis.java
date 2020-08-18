@@ -15,28 +15,30 @@ public class BoardDAOMybatis {
 	private SqlSessionTemplate mybatis;
 
 	public void insertBoard(BoardVO vo) {
-		System.out.println("===> Mybatis·Î insertBoard() ±â´É Ã³¸®");
+		System.out.println("===> Mybatisë¡œ insertBoard() ì‹¤í–‰");
+		System.out.println("ì¶œë ¥ : " + vo.getTitle() + vo.getWriter() + vo.getContent());
 		mybatis.insert("BoardDAO.insertBoard", vo);
 	}
 
 	public void updateBoard(BoardVO vo) {
-		System.out.println("===> Mybatis·Î updateBoard() ±â´É Ã³¸®");
+		System.out.println("===> Mybatisï¿½ï¿½ updateBoard() ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½");
 		mybatis.update("BoardDAO.updateBoard", vo);
 	}
 
 	public void deleteBoard(BoardVO vo) {
-		System.out.println("===> Mybatis·Î deleteBoard() ±â´É Ã³¸®");
+
+		System.out.println("===> Mybatisï¿½ï¿½ deleteBoard() ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½");
 		mybatis.delete("BoardDAO.deleteBoard", vo);
 	}
 
 	public BoardVO getBoard(BoardVO vo) {
-		System.out.println("===> Mybatis·Î getBoard() ±â´É Ã³¸®");
+		System.out.println("===> Mybatisï¿½ï¿½ getBoard() ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½");
 		mybatis.update("BoardDAO.cntPlus", vo);
 		return (BoardVO) mybatis.selectOne("BoardDAO.getBoard", vo);
 	}
 
 	public List<BoardVO> getBoardList(BoardVO vo) {
-		System.out.println("===> Mybatis·Î getBoardList() ±â´É Ã³¸®");
+		System.out.println("===> Mybatisï¿½ï¿½ getBoardList() ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½");
 		if (vo.getSearchCondition().equals("TITLE")) {
 			return mybatis.selectList("BoardDAO.getBoardList_T", vo);
 		} else if (vo.getSearchCondition().equals("CONTENT")) {

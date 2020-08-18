@@ -1,4 +1,5 @@
-<%@page contentType="text/html; charset=EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
@@ -6,7 +7,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>ȸ������</title>
+<title>회원가입</title>
 <style type="text/css">
 /*  .id_check{position: absolute; */
 /*         left: 1110px; */
@@ -16,31 +17,31 @@
 </head>
 <body>
 	<center>
-		<h1>ȸ������</h1>
+		<h1>회원가입</h1>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<hr>
 		<form action="insertUser.do" method="post">
 			<table border="1" cellpadding="7" cellspacing="5">
 				<tr>
-					<td bgcolor="orange">���̵�</td>
-					<td><input width="250" type="text" name="id" id="id" /> <button id="id_check" type="button">�ߺ�üũ</button>
-					<div>�ڸ�</div></td>
+					<td bgcolor="orange">아이디</td>
+					<td><input width="250" type="text" name="id" id="id" /> <button id="id_check" type="button">중복체크</button>
+					<div>자리</div></td>
 				</tr>
 				<tr>
-					<td bgcolor="orange">��й�ȣ</td>
+					<td bgcolor="orange">비밀번호</td>
 					<td><input width="250" type="password" name="password" /></td>
 				</tr>
 				<tr>
-					<td bgcolor="orange">��й�ȣ Ȯ��</td>
+					<td bgcolor="orange">비밀번호 확인</td>
 					<td><input width="250" type="password"/></td>
 				</tr>
 				<tr>
-					<td bgcolor="orange">�̸�</td>
+					<td bgcolor="orange">닉네임</td>
 					<td><input width="250" type="text" name="name" /></td>
 				</tr>
 				<tr>
 					<td colspan="2" align="center">
-					<input type="submit" value="ȸ������"/>
+					<input type="submit" value="회원가입"/>
 				</tr>
 			</table>
 		</form>

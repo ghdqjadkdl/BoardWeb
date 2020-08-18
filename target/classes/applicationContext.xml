@@ -13,7 +13,7 @@
 	<context:component-scan base-package="com.springbook.biz" />
 
 	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
-
+	
 	<!-- DataSource 설정 -->
 	<context:property-placeholder location="classpath:config/database.properties" />
 

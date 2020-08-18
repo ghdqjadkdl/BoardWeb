@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-회원가입 실패.
+본인이 작성한 글만 삭제가능합니다.
 </body>
 </html>

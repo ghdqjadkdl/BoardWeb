@@ -13,9 +13,9 @@
 
 	<insert id="insertBoard" parameterType="board">
 		<![CDATA[
-		INSERT INTO BOARD(SEQ, TITLE, CONTENT, FILE)
+		INSERT INTO BOARD(SEQ, TITLE, CONTENT, FILE, WRITER)
 		VALUES((SELECT NVL(MAX(SEQ), 0) + 1 FROM BOARD),
-		#{title}, #{content}, #{file})
+		#{title}, #{content}, #{file}, #{writer})
 		]]>
 	</insert>
 

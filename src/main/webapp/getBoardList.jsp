@@ -1,4 +1,5 @@
-<%@page contentType="text/html; charset=EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
@@ -8,17 +9,30 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>±Û ¸ñ·Ï</title>
-<!-- ·Î±×ÀÎ ÇØ¾ß °Ô½ÃÆÇ ¿­¶÷ °¡´É -->
+<title>ê¸€ ëª©ë¡</title>
+<!-- ë¡œê·¸ì¸ í•´ì•¼ ê²Œì‹œíŒ ì—´ëŒ ê°€ëŠ¥ -->
 <c:if test="${userName == null }">
  <script> history.back();</script>
 </c:if>
+<style>
+ h1{
+ 	display: inline;
+ 	align : center;
+ 	margin-left: 200px;
+ }
+ #user{
+  float: right;
+  font-size: 15px;
+  border: 1px solid gray;
+  margin: 20px 50px 0 0;
+ }
+</style>
 </head>
 <body>
 	<center>
-		<h1><spring:message code="message.board.list.mainTitle"/></h1>
-		<h3>${userName } ´Ô È¯¿µÇÕ´Ï´Ù!</h3> <a href="logout.do">Log-out</a>
-		<!-- °Ë»ö ½ÃÀÛ -->
+		<h1>ê²Œì‹œê¸€ ëª©ë¡</h1><span id="user"><a href="logout.do">Log-out</a>&nbsp;&nbsp;&nbsp;<a href="getUserInfo.do">íšŒì›ì •ë³´ ë³´ê¸°</a></span>
+		<h3>${userName } ë‹˜ í™˜ì˜í•©ë‹ˆë‹¤!</h3> 
+		<!-- ê²€ìƒ‰ ì‹œì‘ -->
 		<form action="getBoardList.do" method="post">
 			<table border="1" cellpadding="0" cellspacing="0" width="700">
 				<tr>
@@ -34,7 +48,7 @@
 				</tr>
 			</table>
 		</form>
-		<!-- °Ë»ö Á¾·á -->
+		<!-- ê²€ìƒ‰ ì¢…ë£Œ -->
 		<table border="1" cellpadding="0" cellspacing="0" width="700">
 			<tr>
 				<th bgcolor="orange" width="100">

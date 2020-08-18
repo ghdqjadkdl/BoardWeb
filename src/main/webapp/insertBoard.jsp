@@ -1,37 +1,38 @@
-<%@page contentType="text/html; charset=EUC-KR"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<title>»õ±Ûµî·Ï</title>
+<title>ìƒˆê¸€ë“±ë¡</title>
 </head>
 <body>
 	<center>
-		<h1>±Û µî·Ï</h1>
+		<h1>ê¸€ ë“±ë¡</h1>
 		<a href="logout.do">Log-out</a>
 		<hr>
 		<form action="insertBoard.do" method="post" enctype="multipart/form-data">
 			<table border="1" cellpadding="0" cellspacing="0">
 				<tr>
-					<td bgcolor="orange" width="70">Á¦¸ñ</td>
+					<td bgcolor="orange" width="70">ì œëª©</td>
 					<td align="left"><input type="text" name="title" /></td>
 				</tr>
 				<tr>
-					<td bgcolor="orange">³»¿ë</td>
+					<td bgcolor="orange">ë‚´ìš©</td>
 					<td align="left"><textarea name="content" cols="40" rows="10"></textarea></td>
 				</tr>
 				<tr>
-					<td bgcolor="orange" width="70">¾÷·Îµå</td><td align="left">
+					<td bgcolor="orange" width="70">ì—…ë¡œë“œ</td><td align="left">
 					<input type="file" name="uploadFile"/></td>
 				</tr>
 				<tr>
 					<td colspan="2" align="center"><input type="submit"
-						value=" »õ±Û µî·Ï " /></td>
+						value=" ìƒˆê¸€ ë“±ë¡ " /></td>
 				</tr>
 			</table>
+			<input type="hidden" name="writer" value="${userName }" />
 		</form>
 		<hr>
-		<a href="getBoardList.do">±Û ¸ñ·Ï °¡±â</a>
+		<a href="getBoardList.do">ê¸€ ëª©ë¡ ê°€ê¸°</a>
 	</center>
 </body>
 </html>

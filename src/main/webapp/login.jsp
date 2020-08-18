@@ -1,4 +1,5 @@
-<%@page contentType="text/html; charset=EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
@@ -34,7 +35,7 @@
 			</table>
 		</form>
 		<hr>
-		<a href="insertUser.jsp">х╦©Ь╟║ют</a>
+		<a href="insertUser.jsp">М ▄Л⌡░Й╟─Л·┘</a>
 	</center>
 </body>
 </html>
