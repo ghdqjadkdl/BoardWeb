@@ -12,19 +12,16 @@ import com.springbook.biz.user.UserVO;
 // DAO(Data Access Object)
 @Repository("userDAO")
 public class UserDAO {
-	// JDBC °ü·Ã º¯¼ö
 	private Connection conn = null;
 	private PreparedStatement stmt = null;
 	private ResultSet rs = null;
-	// SQL ¸í·É¾îµé
+	
 	private final String USER_GET = "select * from users where id=? and password=?";
 
-	// CRUD ±â´ÉÀÇ ¸Þ¼Òµå ±¸Çö
-	// È¸¿ø µî·Ï
 	public UserVO getUser(UserVO vo) {
 		UserVO user = null;
 		try {
-			System.out.println("===> JDBC·Î getUser() ±â´É Ã³¸®");
+			System.out.println("===> JDBCë¡œ getUser() ì‹¤í–‰");
 			conn = JDBCUtil.getConnection();
 			stmt = conn.prepareStatement(USER_GET);
 			stmt.setString(1, vo.getId());

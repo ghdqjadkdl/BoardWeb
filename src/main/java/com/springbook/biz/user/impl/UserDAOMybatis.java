@@ -16,7 +16,7 @@ public class UserDAOMybatis {
 	private SqlSessionTemplate mybatis;
 
 	public void insertUser(UserVO vo) {
-		System.out.println("===> Mybatis·Î insertUser() ±â´É Ã³¸®");
+		System.out.println("===> Mybatisë¡œ insertUser() ì‹¤í–‰");
 		 mybatis.insert("UserDAO.insertUser", vo);
 	}
 

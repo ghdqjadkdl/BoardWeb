@@ -15,14 +15,14 @@ public class LoginController {
 
 	@RequestMapping(value = "/login.do", method = RequestMethod.GET)
 	public String loginView(@ModelAttribute("user") UserVO vo) {
-		System.out.println("·Î±×ÀÎ È­¸éÀ¸·Î ÀÌµ¿...");
+		System.out.println("ë¡œê·¸ì¸í™”ë©´ìœ¼ë¡œ ì´ë™..");
 		return "login.jsp";
 	}
 
 	@RequestMapping(value = "/login.do", method = RequestMethod.POST)
 	public String login(UserVO vo, UserDAO userDAO, HttpSession session) {
 		if (vo.getId() == null || vo.getId().equals("")) {
-			throw new IllegalArgumentException("¾ÆÀÌµğ´Â ¹İµå½Ã ÀÔ·ÂÇØ¾ß ÇÕ´Ï´Ù.");
+			throw new IllegalArgumentException("ì•„ì´ë”” ì…ë ¥.");
 		}
 		UserVO user = userDAO.getUser(vo);
 		if (user != null) {

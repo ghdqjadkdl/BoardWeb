@@ -21,24 +21,24 @@ public class BoardDAOMybatis {
 	}
 
 	public void updateBoard(BoardVO vo) {
-		System.out.println("===> Mybatis�� updateBoard() ��� ó��");
+		System.out.println("===> Mybatis로 updateBoard() 실행");
 		mybatis.update("BoardDAO.updateBoard", vo);
 	}
 
 	public void deleteBoard(BoardVO vo) {
 
-		System.out.println("===> Mybatis�� deleteBoard() ��� ó��");
+		System.out.println("===> Mybatis로 deleteBoard() 실행");
 		mybatis.delete("BoardDAO.deleteBoard", vo);
 	}
 
 	public BoardVO getBoard(BoardVO vo) {
-		System.out.println("===> Mybatis�� getBoard() ��� ó��");
+		System.out.println("===> Mybatis로 getBoard() 실행");
 		mybatis.update("BoardDAO.cntPlus", vo);
 		return (BoardVO) mybatis.selectOne("BoardDAO.getBoard", vo);
 	}
 
 	public List<BoardVO> getBoardList(BoardVO vo) {
-		System.out.println("===> Mybatis�� getBoardList() ��� ó��");
+		System.out.println("===> Mybatis로 getBoardList() 실행");
 		if (vo.getSearchCondition().equals("TITLE")) {
 			return mybatis.selectList("BoardDAO.getBoardList_T", vo);
 		} else if (vo.getSearchCondition().equals("CONTENT")) {

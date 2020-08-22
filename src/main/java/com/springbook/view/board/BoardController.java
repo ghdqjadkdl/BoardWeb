@@ -38,11 +38,9 @@ public class BoardController {
 		return boardListVO;
 	}
 
-	// �� ���
 	@RequestMapping(value = "/insertBoard.do")
 	public String insertBoard(BoardVO vo) throws IOException {
 		System.out.println("출력 : " + vo.getTitle() + vo.getWriter() + vo.getContent());
-		// ���� ���ε� ó��
 		MultipartFile uploadFile = vo.getUploadFile();
 		if (!uploadFile.isEmpty()) {
 			String fileName = uploadFile.getOriginalFilename();
@@ -52,14 +50,12 @@ public class BoardController {
 		return "getBoardList.do";
 	}
 
-	// �� ����
 	@RequestMapping("/updateBoard.do")
 	public String updateBoard(@ModelAttribute("board") BoardVO vo) {
 		boardService.updateBoard(vo);
 		return "getBoardList.do";
 	}
 
-	// �� ����
 	@RequestMapping("/deleteBoard.do")
 	public String deleteBoard(BoardVO vo, HttpSession session) {
 		System.out.println("작성자 : " + vo.getWriter()+"seq : "+vo.getSeq()+"타이틀 : "+vo.getTitle()+ "세션 : "+session.getAttribute("userName"));
@@ -73,32 +69,28 @@ public class BoardController {
 	
 	}
 
-	// �� �� ��ȸ
 	@RequestMapping("/getBoard.do")
 	public String getBoard(BoardVO vo, Model model) {
-		model.addAttribute("board", boardService.getBoard(vo)); // Model ���� ����
-		return "getBoard.jsp"; // View �̸� ����
+		model.addAttribute("board", boardService.getBoard(vo)); 
+		return "getBoard.jsp"; 
 	}
 
-	// �˻� ���� ��� ����
 	@ModelAttribute("conditionMap")
 	public Map<String, String> searchConditionMap() {
 		Map<String, String> conditionMap = new HashMap<String, String>();
-		conditionMap.put("����", "TITLE");
-		conditionMap.put("����", "CONTENT");
+		conditionMap.put("제목", "TITLE");
+		conditionMap.put("내용", "CONTENT");
 		return conditionMap;
 	}
 
-	// �� ��� �˻�
 	@RequestMapping("/getBoardList.do")
 	public String getBoardList(BoardVO vo, Model model) {
-		// Null Check
 		if (vo.getSearchCondition() == null)
 			vo.setSearchCondition("TITLE");
 		if (vo.getSearchKeyword() == null)
 			vo.setSearchKeyword("");
-		// Model ���� ����
+		
 		model.addAttribute("boardList", boardService.getBoardList(vo));
-		return "getBoardList.jsp"; // View �̸� ����
+		return "getBoardList.jsp"; 
 	}
 }
